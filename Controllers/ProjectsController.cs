@@ -1,25 +1,38 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
-namespace PersonalPortfolio.Controllers
+namespace Personal_Portfolio.Controllers
 {
     public class ProjectsController : Controller
     {
         public IActionResult Index()
         {
-            ViewBag.Title = "Personal Portfolio";
-            ViewBag.Description = "This project was created to give an overview of my portfolio and all the things that I have achieved since I started this journey of IT.";
-            ViewBag.Technologies = "AspNetCore, MVC framework, Javascript";
-            return View();
-        }
+            var projects = new List<ProjectItem>
+            {
+                new ProjectItem
+                {
+                    Title = "Personal Portfolio Website",
+                    Description = "A responsive portfolio website built with ASP.NET Core MVC to showcase my projects and skills.",
+                    Technologies = new List<string> { "ASP.NET Core", "C#", "HTML", "CSS", "JavaScript" }
+                },
+                new ProjectItem
+                {
+                    Title = "E-commerce Platform",
+                    Description = "An online store application with features like product listing, shopping cart, and user authentication.",
+                    Technologies = new List<string> { "ASP.NET Core", "Entity Framework", "SQL Server", "Bootstrap" }
+                },
+                new ProjectItem
+                {
+                    Title = "Task Management App",
+                    Description = "A web application for managing tasks and to-do lists with user-friendly interface and real-time updates.",
+                    Technologies = new List<string> { "ASP.NET Core", "SignalR", "React", "MongoDB" }
+                }
+            };
 
-        public IActionResult Details()
-        {
-            return Content("My projects: Personal Portfolio, Calculator, My First Static Website");
-        }
+            //Attach the list to ViewBag
+            ViewBag.Projects = projects;
 
-        public IActionResult Timeline()
-        {
-            return Content("The Project will take me 3 months to complete.");
+            return View(projects);
         }
     }
 }
