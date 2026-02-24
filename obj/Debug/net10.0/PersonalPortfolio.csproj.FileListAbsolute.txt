@@ -95,3 +95,4 @@
 /home/umojadevops/Desktop/PersonalPortfolio/obj/Debug/net10.0/PersonalPortfolio.pdb
 /home/umojadevops/Desktop/PersonalPortfolio/obj/Debug/net10.0/PersonalPortfolio.genruntimeconfig.cache
 /home/umojadevops/Desktop/PersonalPortfolio/obj/Debug/net10.0/ref/PersonalPortfolio.dll
+/home/umojadevops/Desktop/PersonalPortfolio/obj/Debug/net10.0/PersonalPortfolio.sourcelink.json
