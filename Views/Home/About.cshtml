@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "About Me";
+
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Who I Am</h2>
+        <p>@ViewBag.Inroduction</p>
+        <p>Location: @ViewBag.Location</p>
+        <p>Experience: @ViewBag.YearsExperience years</p>
+    </div>
+</div>
